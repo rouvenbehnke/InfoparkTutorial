@@ -15,3 +15,4 @@
 //= require twitter/bootstrap
 //= require_self
 //= require_tree ./application
+//= require blueimp-gallery-all

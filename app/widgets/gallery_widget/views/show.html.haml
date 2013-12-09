@@ -1,0 +1,22 @@
+%br
+= cms_tag(:h2, @widget, :description)
+.container
+- @widget.ressources.each_index do |toast|
+  - if toast.modulo(2) == 0
+    - @schnitzel = cms_url @widget.ressources[toast]
+  - else
+    - @banane = cms_url @widget.ressources[toast]
+    #links
+      %a{"data-gallery" => "", href: @banane , title: "Reference-List-Test-Gallery", class: "col-md-2"}
+        %img{src: @schnitzel, :style => "background: #eee; border: 4px solid white; box-shadow: 0 0 1px rgba(0,0,0, .4);" } 
+
+#blueimp-gallery.blueimp-gallery
+  .slides
+  %h3.title
+  %a.prev ‹
+  %a.next ›
+  %a.close ×
+  %a.play-pause
+  %ol.indicator
+
+

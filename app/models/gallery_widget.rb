@@ -1,0 +1,2 @@
+class GalleryWidget < Widget
+end
