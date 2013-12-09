@@ -37,3 +37,30 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem "active_attr"
+gem "haml-rails"
+gem "cells"
+gem "utf8-cleaner"
+gem "infopark_crm_connector"
+group :assets do
+  gem "therubyracer", :platforms => :ruby
+  gem "less-rails-bootstrap", "~> 3.0"
+end
+
+group :assets do
+  gem "bootstrap-datepicker-rails"
+  gem "jquery-ui-rails"
+end
+
+group :test, :development do
+  gem "pry-rails"
+  gem "rails-footnotes"
+  gem "thin"
+  gem "infopark_dashboard", "~> 0.0.3"
+end
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
