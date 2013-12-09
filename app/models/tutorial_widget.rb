@@ -1,0 +1,2 @@
+class TutorialWidget < Widget
+end

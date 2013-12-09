@@ -39,6 +39,8 @@ GEM
       erubis (>= 2.6.6)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    blueimp-gallery (2.11.0.1)
+      railties (>= 3.1.0)
     bootstrap-datepicker-rails (1.1.1.10)
       railties (>= 3.0)
     builder (3.0.4)
@@ -188,6 +190,7 @@ DEPENDENCIES
   active_attr
   better_errors
   binding_of_caller
+  blueimp-gallery
   bootstrap-datepicker-rails
   cells
   coffee-rails (~> 3.2.1)
