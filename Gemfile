@@ -37,6 +37,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+gem "mini_magick"
 gem "blueimp-gallery"
 gem "active_attr"
 gem "haml-rails"
