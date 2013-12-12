@@ -69,6 +69,12 @@ class Obj < ::RailsConnector::BasicObj
     self[:headline] || '[no headline]'
   end
 
+  def valid_widget_classes_for(field_name)
+    if field_name == "main_content"
+      %w[GalleryWidget HeadlineWidget ImageWidget TextWidget TutorialWidget]
+    end
+  end
+
   # By default, objects can be displayed in navigation sections. Either add a
   # boolean cms attribute +show_in_navigation+ or override the method directly
   # in your model.
