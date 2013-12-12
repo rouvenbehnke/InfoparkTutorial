@@ -19,6 +19,7 @@
       @close()
 
     @inspector = @modal.find(@inspectorSelector)
+    @inspector.hide()
 
   _onInspect: (event) ->
     unless $(event.target).hasClass('select-item')
@@ -32,7 +33,7 @@
   _onDelete: ->
     @_renderLoading()
     infopark.delete_obj(@objectId).done =>
-      @close
+      @close()
       @modal.trigger('mediabrowser.refresh')
 
   _renderLoading: ->
@@ -65,7 +66,7 @@
         id: @objectId
       success: (json) =>
         @inspector.html(json.content)
-        infopark.editing.refresh(@inspector)
+        infopark.trigger('new_content', @inspector)
 
       error: =>
         @inspector.html('')
