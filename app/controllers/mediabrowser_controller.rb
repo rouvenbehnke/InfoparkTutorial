@@ -7,7 +7,7 @@ class MediabrowserController < ApplicationController
   def self.searchable_object_classes
     %w(
       Image
-      BlogPost
+      BlogEntry
     )
   end
 
