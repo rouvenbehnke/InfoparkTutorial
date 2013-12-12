@@ -1,0 +1,41 @@
+.datum-widget-tutorial
+  - toast = @widget.datum.to_s
+  = toast.to(10)
+- if @widget.border == "Yes"
+  .tutorial-widget-yes
+    %b
+      String-Datatype:
+    = cms_tag(:div, @widget, :headline)
+    %b
+      HTML-Datatype:
+    = cms_tag(:div, @widget, :content)
+
+    %b
+      Linklist-Datatype:
+    %br
+    - @widget.partnerlinks.each do |link|
+      = link_to(cms_path(link), class:'btn btn-primary btn-large') do
+        = link.title
+        %i.icon-white.icon-thumbs-up
+
+
+- if @widget.border == "No"
+  .tutorial-widget-no
+    %b
+      String-Datatype:
+    = cms_tag(:div, @widget, :headline)
+    %b
+      HTML-Datatype:
+    = cms_tag(:div, @widget, :content)
+
+    %b
+      Linklist-Datatype:
+    %br
+    - @widget.partnerlinks.each do |link|
+      = link_to(cms_path(link), class:'btn btn-primary btn-large') do
+        = link.title
+        %i.icon-white.icon-thumbs-up
+
+
+
+        
